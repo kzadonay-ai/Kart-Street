@@ -589,7 +589,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114287439}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18279ec1fad4c2c49ab4239fea2cb6c4, type: 3}
   m_Name: 
@@ -653,6 +653,56 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114287444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114287439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e38fdb76fca544ad0523e454dab04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WheelInput
+  steerAction: {fileID: -5386097112070043043, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  throttleAction: {fileID: -8211706945032177010, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  brakeAction: {fileID: 5314462063795619631, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  reverseAction: {fileID: -1423213140789096388, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  rampSpeed: 10
+  steerSmooth: 8
+  steerDeadzone: 0.03
+  steerGain: 2.5
+  steerCurve: 1
+--- !u!114 &114287445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114287439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c97db5f63a07994985c9d76cbe1ebed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArcadeCar
+  input: {fileID: 114287444}
+  acceleration: 60
+  brakeForce: 50
+  reverseAcceleration: 20
+  reverseEngageSpeed: 2
+  maxSpeed: 40
+  maxReverseSpeed: 12
+  maxSteer: 200
+  minSpeedToSteer: 1
+  highSpeedSteerFactor: 0.75
+  grip: 6
+  centerOfMassDrop: 0.25
+  angularDamping: 2
+  groundAlignSpeed: 10
+  airAlignSpeed: 2
+  maxGroundAngle: 50
+  showDebug: 1
 --- !u!1 &120601834 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 030ab95364a8b4a458c3a9de3738adfe, type: 3}
@@ -665,7 +715,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120601834}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35e12d35e29560a429b8612e68c9db5e, type: 3}
   m_Name: 
@@ -755,6 +805,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.5038622, z: 2.0366633}
   m_Center: {x: -2.9192815e-10, y: 0.24806881, z: 0.2723655}
+--- !u!114 &120601839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120601834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c97db5f63a07994985c9d76cbe1ebed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArcadeCar
+  input: {fileID: 120601840}
+  acceleration: 60
+  brakeForce: 50
+  reverseAcceleration: 20
+  reverseEngageSpeed: 2
+  maxSpeed: 40
+  maxReverseSpeed: 12
+  maxSteer: 200
+  minSpeedToSteer: 1
+  highSpeedSteerFactor: 0.75
+  grip: 6
+  centerOfMassDrop: 0.25
+  angularDamping: 2
+  groundAlignSpeed: 10
+  airAlignSpeed: 2
+  maxGroundAngle: 50
+  showDebug: 1
+--- !u!114 &120601840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120601834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e38fdb76fca544ad0523e454dab04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WheelInput
+  steerAction: {fileID: -5386097112070043043, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  throttleAction: {fileID: -8211706945032177010, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  brakeAction: {fileID: 5314462063795619631, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  reverseAction: {fileID: -1423213140789096388, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  rampSpeed: 10
+  steerSmooth: 8
+  steerDeadzone: 0.03
+  steerGain: 2.5
+  steerCurve: 1
 --- !u!1 &130732530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2599756482783894305, guid: 1e94db42e8c4cb94280aac7000ca71b7, type: 3}
@@ -832,6 +932,7 @@ GameObject:
   - component: {fileID: 173032636}
   - component: {fileID: 173032635}
   - component: {fileID: 173032634}
+  - component: {fileID: 173032639}
   m_Layer: 0
   m_Name: Main Camera carro2
   m_TagString: MainCamera
@@ -846,7 +947,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173032633}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6dc9595e49d8dd041bbf985692d9c599, type: 3}
   m_Name: 
@@ -995,6 +1096,48 @@ Transform:
   - {fileID: 1893375774}
   m_Father: {fileID: 1356687728}
   m_LocalEulerAnglesHint: {x: 15.374, y: 0, z: 0}
+--- !u!114 &173032639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173032633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b741a32668b249e40a00ff842e4cf04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::camarakart7
+  target: {fileID: 114287440}
+  carBody: {fileID: 114287443}
+  wheelInput: {fileID: 114287444}
+  maxSpeedRef: 40
+  useColliderCenter: 1
+  focusOffset: {x: 0, y: 0, z: 0}
+  distance: 5
+  height: 2
+  positionSmoothTime: 0.02
+  yawFollowSpeed: 3
+  rotationSmoothSpeed: 6
+  lookHeight: 0.5
+  mouseSensitivity: 2
+  mouseSmoothTime: 0.05
+  minVerticalAngle: -10
+  maxVerticalAngle: 60
+  minHorizontalAngle: -110
+  maxHorizontalAngle: 110
+  returnDelay: 0.3
+  returnSmoothTime: 0.6
+  leanAmount: 3
+  leanSmoothness: 4
+  bobAmount: 0.02
+  bobSpeed: 10
+  fovBase: 75
+  fovMaxBoost: 12
+  fovSmoothness: 3
+  debugYaw: 0
+  debugPitch: 0
+  debugIsOrbiting: 0
 --- !u!1 &183433818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4419806816068090870, guid: 1e94db42e8c4cb94280aac7000ca71b7, type: 3}
@@ -2270,6 +2413,7 @@ GameObject:
   - component: {fileID: 330585549}
   - component: {fileID: 330585548}
   - component: {fileID: 330585550}
+  - component: {fileID: 330585551}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2403,7 +2547,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8baff31a024fcb942984c120f0c6e1b2, type: 3}
   m_Name: 
@@ -2423,6 +2567,48 @@ MonoBehaviour:
   returnDelay: 0.3
   returnSmoothTime: 0.6
   leanAmount: 6
+  leanSmoothness: 4
+  bobAmount: 0.02
+  bobSpeed: 10
+  fovBase: 75
+  fovMaxBoost: 12
+  fovSmoothness: 3
+  debugYaw: 0
+  debugPitch: 0
+  debugIsOrbiting: 0
+--- !u!114 &330585551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b741a32668b249e40a00ff842e4cf04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::camarakart7
+  target: {fileID: 1842930415}
+  carBody: {fileID: 1842930414}
+  wheelInput: {fileID: 1842930416}
+  maxSpeedRef: 40
+  useColliderCenter: 1
+  focusOffset: {x: 0, y: 0, z: 0}
+  distance: 3
+  height: 1.5
+  positionSmoothTime: 0.02
+  yawFollowSpeed: 3
+  rotationSmoothSpeed: 6
+  lookHeight: 0.5
+  mouseSensitivity: 2
+  mouseSmoothTime: 0.05
+  minVerticalAngle: -10
+  maxVerticalAngle: 60
+  minHorizontalAngle: -110
+  maxHorizontalAngle: 110
+  returnDelay: 0.3
+  returnSmoothTime: 0.6
+  leanAmount: 3
   leanSmoothness: 4
   bobAmount: 0.02
   bobSpeed: 10
@@ -2661,6 +2847,7 @@ GameObject:
   - component: {fileID: 381841154}
   - component: {fileID: 381841153}
   - component: {fileID: 381841152}
+  - component: {fileID: 381841157}
   m_Layer: 0
   m_Name: camara carro 4
   m_TagString: Untagged
@@ -2675,7 +2862,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381841151}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ab8409070a01564e81334a61190c96c, type: 3}
   m_Name: 
@@ -2823,6 +3010,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1934933799}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &381841157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381841151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b741a32668b249e40a00ff842e4cf04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::camarakart7
+  target: {fileID: 1587154455}
+  carBody: {fileID: 1587154458}
+  wheelInput: {fileID: 1587154462}
+  maxSpeedRef: 40
+  useColliderCenter: 1
+  focusOffset: {x: 0, y: 0, z: 0}
+  distance: 5
+  height: 2
+  positionSmoothTime: 0.02
+  yawFollowSpeed: 3
+  rotationSmoothSpeed: 6
+  lookHeight: 0.5
+  mouseSensitivity: 2
+  mouseSmoothTime: 0.05
+  minVerticalAngle: -10
+  maxVerticalAngle: 60
+  minHorizontalAngle: -110
+  maxHorizontalAngle: 110
+  returnDelay: 0.3
+  returnSmoothTime: 0.6
+  leanAmount: 3
+  leanSmoothness: 4
+  bobAmount: 0.02
+  bobSpeed: 10
+  fovBase: 75
+  fovMaxBoost: 12
+  fovSmoothness: 3
+  debugYaw: 0
+  debugPitch: 0
+  debugIsOrbiting: 0
 --- !u!1 &385503882 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -362661614135170412, guid: 1e94db42e8c4cb94280aac7000ca71b7, type: 3}
@@ -3326,6 +3555,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4b65782c7ddd4c24f9f332ba51ce3dbe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1587154461}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4b65782c7ddd4c24f9f332ba51ce3dbe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1587154463}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4b65782c7ddd4c24f9f332ba51ce3dbe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1587154462}
   m_SourcePrefab: {fileID: 100100000, guid: 4b65782c7ddd4c24f9f332ba51ce3dbe, type: 3}
 --- !u!1 &436120329 stripped
 GameObject:
@@ -4723,6 +4958,7 @@ GameObject:
   - component: {fileID: 733055107}
   - component: {fileID: 733055106}
   - component: {fileID: 733055105}
+  - component: {fileID: 733055110}
   m_Layer: 0
   m_Name: Camera carro1
   m_TagString: Untagged
@@ -4737,7 +4973,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733055104}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8ec95a3bc0cba74bbac2cd49433d43c, type: 3}
   m_Name: 
@@ -4885,6 +5121,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 738268425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &733055110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733055104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b741a32668b249e40a00ff842e4cf04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::camarakart7
+  target: {fileID: 120601837}
+  carBody: {fileID: 120601836}
+  wheelInput: {fileID: 120601840}
+  maxSpeedRef: 40
+  useColliderCenter: 1
+  focusOffset: {x: 0, y: 0, z: 0}
+  distance: 3
+  height: 1.8
+  positionSmoothTime: 0.02
+  yawFollowSpeed: 3
+  rotationSmoothSpeed: 6
+  lookHeight: 0.5
+  mouseSensitivity: 2
+  mouseSmoothTime: 0.05
+  minVerticalAngle: -10
+  maxVerticalAngle: 60
+  minHorizontalAngle: -110
+  maxHorizontalAngle: 110
+  returnDelay: 0.3
+  returnSmoothTime: 0.6
+  leanAmount: 3
+  leanSmoothness: 4
+  bobAmount: 0.02
+  bobSpeed: 10
+  fovBase: 75
+  fovMaxBoost: 12
+  fovSmoothness: 3
+  debugYaw: 0
+  debugPitch: 0
+  debugIsOrbiting: 0
 --- !u!1 &736162314 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 324365552144920132, guid: 1e94db42e8c4cb94280aac7000ca71b7, type: 3}
@@ -4927,7 +5205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &738268425
 Transform:
   m_ObjectHideFlags: 0
@@ -5499,6 +5777,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 030ab95364a8b4a458c3a9de3738adfe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 120601838}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 030ab95364a8b4a458c3a9de3738adfe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 120601839}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 030ab95364a8b4a458c3a9de3738adfe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 120601840}
   m_SourcePrefab: {fileID: 100100000, guid: 030ab95364a8b4a458c3a9de3738adfe, type: 3}
 --- !u!1 &788756498
 GameObject:
@@ -5573,7 +5857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &791392860
 Transform:
   m_ObjectHideFlags: 0
@@ -5587,8 +5871,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1847998012}
   - {fileID: 1616011161}
+  - {fileID: 1847998012}
   m_Father: {fileID: 273020200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792977511 stripped
@@ -5746,7 +6030,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877862299}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 950731ea745309e4caf4c1d7d3eedd29, type: 3}
   m_Name: 
@@ -5833,6 +6117,56 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &877862304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877862299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e38fdb76fca544ad0523e454dab04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WheelInput
+  steerAction: {fileID: -5386097112070043043, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  throttleAction: {fileID: -8211706945032177010, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  brakeAction: {fileID: 5314462063795619631, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  reverseAction: {fileID: -1423213140789096388, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  rampSpeed: 10
+  steerSmooth: 8
+  steerDeadzone: 0.03
+  steerGain: 2.5
+  steerCurve: 1
+--- !u!114 &877862305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877862299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c97db5f63a07994985c9d76cbe1ebed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArcadeCar
+  input: {fileID: 877862304}
+  acceleration: 55
+  brakeForce: 50
+  reverseAcceleration: 20
+  reverseEngageSpeed: 2
+  maxSpeed: 41.05
+  maxReverseSpeed: 12
+  maxSteer: 200
+  minSpeedToSteer: 1
+  highSpeedSteerFactor: 0.75
+  grip: 6
+  centerOfMassDrop: 0.25
+  angularDamping: 2
+  groundAlignSpeed: 10
+  airAlignSpeed: 2
+  maxGroundAngle: 50
+  showDebug: 1
 --- !u!1 &887368489
 GameObject:
   m_ObjectHideFlags: 0
@@ -6044,7 +6378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &954147821
 Transform:
   m_ObjectHideFlags: 0
@@ -6058,8 +6392,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 330585546}
   - {fileID: 1842930415}
+  - {fileID: 330585546}
   m_Father: {fileID: 273020200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963877710
@@ -6254,6 +6588,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3564fc7e8a0b50640a489f23b478191a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1616011162}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3564fc7e8a0b50640a489f23b478191a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1616011166}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3564fc7e8a0b50640a489f23b478191a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1616011165}
   m_SourcePrefab: {fileID: 100100000, guid: 3564fc7e8a0b50640a489f23b478191a, type: 3}
 --- !u!1 &977433551 stripped
 GameObject:
@@ -6520,6 +6860,7 @@ GameObject:
   - component: {fileID: 1054819969}
   - component: {fileID: 1054819968}
   - component: {fileID: 1054819967}
+  - component: {fileID: 1054819972}
   m_Layer: 0
   m_Name: camara carro6
   m_TagString: Untagged
@@ -6534,7 +6875,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054819966}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ada3839b05d0b848b8fbed595fa8c2a, type: 3}
   m_Name: 
@@ -6682,6 +7023,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1727456062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1054819972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054819966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b741a32668b249e40a00ff842e4cf04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::camarakart7
+  target: {fileID: 877862300}
+  carBody: {fileID: 877862303}
+  wheelInput: {fileID: 877862304}
+  maxSpeedRef: 40
+  useColliderCenter: 1
+  focusOffset: {x: 0, y: 0, z: 0}
+  distance: 5
+  height: 2
+  positionSmoothTime: 0.02
+  yawFollowSpeed: 3
+  rotationSmoothSpeed: 6
+  lookHeight: 0.5
+  mouseSensitivity: 2
+  mouseSmoothTime: 0.05
+  minVerticalAngle: -10
+  maxVerticalAngle: 60
+  minHorizontalAngle: -110
+  maxHorizontalAngle: 110
+  returnDelay: 0.3
+  returnSmoothTime: 0.6
+  leanAmount: 3
+  leanSmoothness: 4
+  bobAmount: 0.02
+  bobSpeed: 10
+  fovBase: 75
+  fovMaxBoost: 12
+  fovSmoothness: 3
+  debugYaw: 0
+  debugPitch: 0
+  debugIsOrbiting: 0
 --- !u!1 &1059703063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -643075534879542175, guid: 1e94db42e8c4cb94280aac7000ca71b7, type: 3}
@@ -7498,6 +7881,7 @@ MonoBehaviour:
   botonContinuar: {fileID: 406430314}
   botonSalir: {fileID: 990109174}
   nombreEscenaMenu: MainMenu
+  esperaMaximaEnvio: 10
 --- !u!4 &1223101670
 Transform:
   m_ObjectHideFlags: 0
@@ -7915,7 +8299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1356687728
 Transform:
   m_ObjectHideFlags: 0
@@ -7929,8 +8313,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 173032638}
   - {fileID: 114287440}
+  - {fileID: 173032638}
   m_Father: {fileID: 273020200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1359686074
@@ -8211,6 +8595,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: da14a3e7081b7a549a33420943ee353f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1365581976}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: da14a3e7081b7a549a33420943ee353f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1365581979}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: da14a3e7081b7a549a33420943ee353f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1365581978}
     - targetCorrespondingSourceObject: {fileID: 3640628875245151430, guid: da14a3e7081b7a549a33420943ee353f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 226950990}
@@ -8232,7 +8622,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365581973}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b737ee254b391e49853a19eb734c53e, type: 3}
   m_Name: 
@@ -8303,7 +8693,7 @@ Rigidbody:
   m_GameObject: {fileID: 1365581973}
   serializedVersion: 5
   m_Mass: 1450
-  m_LinearDamping: 0
+  m_LinearDamping: 0.5
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -8319,8 +8709,58 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &1365581978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365581973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e38fdb76fca544ad0523e454dab04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WheelInput
+  steerAction: {fileID: -5386097112070043043, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  throttleAction: {fileID: -8211706945032177010, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  brakeAction: {fileID: 5314462063795619631, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  reverseAction: {fileID: -1423213140789096388, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  rampSpeed: 10
+  steerSmooth: 8
+  steerDeadzone: 0.03
+  steerGain: 2.5
+  steerCurve: 1
+--- !u!114 &1365581979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365581973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c97db5f63a07994985c9d76cbe1ebed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArcadeCar
+  input: {fileID: 1365581978}
+  acceleration: 30
+  brakeForce: 50
+  reverseAcceleration: 20
+  reverseEngageSpeed: 2
+  maxSpeed: 40
+  maxReverseSpeed: 12
+  maxSteer: 200
+  minSpeedToSteer: 1
+  highSpeedSteerFactor: 0.75
+  grip: 6
+  centerOfMassDrop: 0.25
+  angularDamping: 2
+  groundAlignSpeed: 10
+  airAlignSpeed: 2
+  maxGroundAngle: 50
+  showDebug: 1
 --- !u!1 &1376737502 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6453659963771769177, guid: 1e94db42e8c4cb94280aac7000ca71b7, type: 3}
@@ -8598,6 +9038,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b8f457827a3d7644f9c4dc01c7e16e2b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1842930412}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b8f457827a3d7644f9c4dc01c7e16e2b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1842930417}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b8f457827a3d7644f9c4dc01c7e16e2b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1842930416}
   m_SourcePrefab: {fileID: 100100000, guid: b8f457827a3d7644f9c4dc01c7e16e2b, type: 3}
 --- !u!1 &1486039527 stripped
 GameObject:
@@ -9118,6 +9564,7 @@ GameObject:
   - component: {fileID: 1564714830}
   - component: {fileID: 1564714829}
   - component: {fileID: 1564714833}
+  - component: {fileID: 1564714834}
   m_Layer: 0
   m_Name: Camera kart 7
   m_TagString: Untagged
@@ -9250,7 +9697,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564714828}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6dc9595e49d8dd041bbf985692d9c599, type: 3}
   m_Name: 
@@ -9271,6 +9718,48 @@ MonoBehaviour:
   returnDelay: 0.3
   returnSmoothTime: 0.6
   leanAmount: 6
+  leanSmoothness: 4
+  bobAmount: 0.02
+  bobSpeed: 10
+  fovBase: 75
+  fovMaxBoost: 12
+  fovSmoothness: 3
+  debugYaw: 0
+  debugPitch: 0
+  debugIsOrbiting: 0
+--- !u!114 &1564714834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564714828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b741a32668b249e40a00ff842e4cf04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::camarakart7
+  target: {fileID: 1365581974}
+  carBody: {fileID: 1365581977}
+  wheelInput: {fileID: 1365581978}
+  maxSpeedRef: 40
+  useColliderCenter: 1
+  focusOffset: {x: 0, y: 0, z: 0}
+  distance: 3
+  height: 1.9
+  positionSmoothTime: 0.02
+  yawFollowSpeed: 3
+  rotationSmoothSpeed: 6
+  lookHeight: 0.5
+  mouseSensitivity: 2
+  mouseSmoothTime: 0.05
+  minVerticalAngle: -10
+  maxVerticalAngle: 60
+  minHorizontalAngle: -110
+  maxHorizontalAngle: 110
+  returnDelay: 0.3
+  returnSmoothTime: 0.6
+  leanAmount: 4
   leanSmoothness: 4
   bobAmount: 0.02
   bobSpeed: 10
@@ -9465,14 +9954,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587154454}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 984cac6e4af3c9b47b8753df11390d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::controlcarro4
-  speed: 40
+  speed: 41.02
   turnSpeed: 120
-  acceleration: 60
+  acceleration: 55
   deceleration: 40
   brakeDeceleration: 90
   handbrakeDeceleration: 150
@@ -9551,6 +10040,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2208195, y: 0.6939196, z: 2.1377296}
   m_Center: {x: -0.021239866, y: 0.17188781, z: -0.03232424}
+--- !u!114 &1587154462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587154454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e38fdb76fca544ad0523e454dab04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WheelInput
+  steerAction: {fileID: -5386097112070043043, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  throttleAction: {fileID: -8211706945032177010, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  brakeAction: {fileID: 5314462063795619631, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  reverseAction: {fileID: -1423213140789096388, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  rampSpeed: 10
+  steerSmooth: 8
+  steerDeadzone: 0.03
+  steerGain: 2.5
+  steerCurve: 1
+--- !u!114 &1587154463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587154454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c97db5f63a07994985c9d76cbe1ebed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArcadeCar
+  input: {fileID: 1587154462}
+  acceleration: 55
+  brakeForce: 50
+  reverseAcceleration: 20
+  reverseEngageSpeed: 2
+  maxSpeed: 41.02
+  maxReverseSpeed: 12
+  maxSteer: 200
+  minSpeedToSteer: 1
+  highSpeedSteerFactor: 0.75
+  grip: 6
+  centerOfMassDrop: 0.25
+  angularDamping: 2
+  groundAlignSpeed: 10
+  airAlignSpeed: 2
+  maxGroundAngle: 50
+  showDebug: 1
 --- !u!1 &1587409793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5142867730771548619, guid: 1e94db42e8c4cb94280aac7000ca71b7, type: 3}
@@ -9731,7 +10270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1613197193
 Transform:
   m_ObjectHideFlags: 0
@@ -9814,14 +10353,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616011160}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17519dff6b1d12c429b949e90ccce2ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::controlkart5
-  speed: 40
+  speed: 41.05
   turnSpeed: 120
-  acceleration: 60
+  acceleration: 55
   deceleration: 40
   brakeDeceleration: 90
   handbrakeDeceleration: 150
@@ -9853,6 +10392,56 @@ MonoBehaviour:
   steerSmoothness: 8
   spinAxis: {x: 1, y: 0, z: 0}
   steerAxis: {x: 0, y: 1, z: 0}
+--- !u!114 &1616011165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616011160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e38fdb76fca544ad0523e454dab04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WheelInput
+  steerAction: {fileID: -5386097112070043043, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  throttleAction: {fileID: -8211706945032177010, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  brakeAction: {fileID: 5314462063795619631, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  reverseAction: {fileID: -1423213140789096388, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  rampSpeed: 10
+  steerSmooth: 8
+  steerDeadzone: 0.03
+  steerGain: 2.5
+  steerCurve: 1
+--- !u!114 &1616011166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616011160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c97db5f63a07994985c9d76cbe1ebed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArcadeCar
+  input: {fileID: 1616011165}
+  acceleration: 55
+  brakeForce: 50
+  reverseAcceleration: 20
+  reverseEngageSpeed: 2
+  maxSpeed: 41.05
+  maxReverseSpeed: 12
+  maxSteer: 200
+  minSpeedToSteer: 1
+  highSpeedSteerFactor: 0.75
+  grip: 6
+  centerOfMassDrop: 0.25
+  angularDamping: 2
+  groundAlignSpeed: 10
+  airAlignSpeed: 2
+  maxGroundAngle: 50
+  showDebug: 1
 --- !u!1 &1618991366 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 162037131407833674, guid: 1e94db42e8c4cb94280aac7000ca71b7, type: 3}
@@ -10016,7 +10605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1727456062
 Transform:
   m_ObjectHideFlags: 0
@@ -10030,8 +10619,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1054819971}
   - {fileID: 877862300}
+  - {fileID: 1054819971}
   m_Father: {fileID: 273020200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1728274533 stripped
@@ -10534,7 +11123,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842930411}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13a854233b98ac4d882786dfa339f00, type: 3}
   m_Name: 
@@ -10603,6 +11192,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b8f457827a3d7644f9c4dc01c7e16e2b, type: 3}
   m_PrefabInstance: {fileID: 1483928262}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1842930416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842930411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e38fdb76fca544ad0523e454dab04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WheelInput
+  steerAction: {fileID: -5386097112070043043, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  throttleAction: {fileID: -8211706945032177010, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  brakeAction: {fileID: 5314462063795619631, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  reverseAction: {fileID: -1423213140789096388, guid: e74084caac262284aae1f7d5d76fe82f, type: 3}
+  rampSpeed: 10
+  steerSmooth: 8
+  steerDeadzone: 0.03
+  steerGain: 2.5
+  steerCurve: 1
+--- !u!114 &1842930417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842930411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c97db5f63a07994985c9d76cbe1ebed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArcadeCar
+  input: {fileID: 1842930416}
+  acceleration: 56
+  brakeForce: 50
+  reverseAcceleration: 20
+  reverseEngageSpeed: 2
+  maxSpeed: 40.2
+  maxReverseSpeed: 12
+  maxSteer: 200
+  minSpeedToSteer: 1
+  highSpeedSteerFactor: 0.75
+  grip: 6
+  centerOfMassDrop: 0.25
+  angularDamping: 2
+  groundAlignSpeed: 10
+  airAlignSpeed: 2
+  maxGroundAngle: 50
+  showDebug: 1
 --- !u!1 &1847998007
 GameObject:
   m_ObjectHideFlags: 0
@@ -10616,6 +11255,7 @@ GameObject:
   - component: {fileID: 1847998010}
   - component: {fileID: 1847998009}
   - component: {fileID: 1847998008}
+  - component: {fileID: 1847998013}
   m_Layer: 0
   m_Name: camara kart5
   m_TagString: Untagged
@@ -10630,7 +11270,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847998007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 275f5b78a61dd6541aa98209b39de0b7, type: 3}
   m_Name: 
@@ -10778,6 +11418,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 791392860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1847998013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847998007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b741a32668b249e40a00ff842e4cf04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::camarakart7
+  target: {fileID: 1616011161}
+  carBody: {fileID: 1616011163}
+  wheelInput: {fileID: 1616011165}
+  maxSpeedRef: 40
+  useColliderCenter: 1
+  focusOffset: {x: 0, y: 0, z: 0}
+  distance: 5
+  height: 2
+  positionSmoothTime: 0.02
+  yawFollowSpeed: 3
+  rotationSmoothSpeed: 6
+  lookHeight: 0.5
+  mouseSensitivity: 2
+  mouseSmoothTime: 0.05
+  minVerticalAngle: -10
+  maxVerticalAngle: 60
+  minHorizontalAngle: -110
+  maxHorizontalAngle: 110
+  returnDelay: 0.3
+  returnSmoothTime: 0.6
+  leanAmount: 3
+  leanSmoothness: 4
+  bobAmount: 0.02
+  bobSpeed: 10
+  fovBase: 75
+  fovMaxBoost: 12
+  fovSmoothness: 3
+  debugYaw: 0
+  debugPitch: 0
+  debugIsOrbiting: 0
 --- !u!1001 &1849078786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10858,6 +11540,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 935d0a2c36276524698a23f15dbf55fe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 877862302}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 935d0a2c36276524698a23f15dbf55fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 877862305}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 935d0a2c36276524698a23f15dbf55fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 877862304}
   m_SourcePrefab: {fileID: 100100000, guid: 935d0a2c36276524698a23f15dbf55fe, type: 3}
 --- !u!4 &1854318483 stripped
 Transform:
@@ -11505,7 +12193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1934933799
 Transform:
   m_ObjectHideFlags: 0
@@ -11689,6 +12377,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc72707241cd2724ab3768776796cd27, type: 3}
       insertIndex: -1
       addedObject: {fileID: 114287441}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc72707241cd2724ab3768776796cd27, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 114287445}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc72707241cd2724ab3768776796cd27, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 114287444}
   m_SourcePrefab: {fileID: 100100000, guid: cc72707241cd2724ab3768776796cd27, type: 3}
 --- !u!1 &2014672446 stripped
 GameObject:
